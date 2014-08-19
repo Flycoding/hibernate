@@ -3,19 +3,19 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Aug 20, 2014 12:41:26 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.flyingh.vo.User" table="USER">
+    <class name="com.flyingh.vo.Department" table="DEPARTMENT">
         <id name="id" type="int">
             <column name="ID" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="name" type="java.lang.String">
             <column name="NAME" />
         </property>
-        <property name="age" type="int">
-            <column name="AGE" />
-        </property>
-        <property name="amount" type="double">
-            <column name="AMOUNT" />
-        </property>
+        <set name="employees" table="EMPLOYEE" inverse="true" lazy="true">
+            <key>
+                <column name="dept_id" />
+            </key>
+            <one-to-many class="com.flyingh.vo.Employee" />
+        </set>
     </class>
 </hibernate-mapping>

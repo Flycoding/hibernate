@@ -15,5 +15,7 @@
 		
 		<mapping resource="com/flyingh/vo/User.hbm.xml"/>
 		<mapping resource="com/flyingh/vo/Customer.hbm.xml"/>
+		<mapping resource="com/flyingh/vo/Department.hbm.xml"/>
+		<mapping resource="com/flyingh/vo/Employee.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
