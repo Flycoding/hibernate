@@ -1,5 +1,8 @@
 package com.flyingh.demo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.hibernate.Session;
 import org.junit.Test;
 
@@ -13,7 +16,11 @@ public class CustomerTest {
 		session.beginTransaction();
 		Customer customer = new Customer();
 		customer.setName("haha");
-		customer.setAddresses(new String[] { "a", "b", "c" });
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("a", "first");
+		map.put("b", "second");
+		map.put("c", "third");
+		customer.setMap(map);
 		session.save(customer);
 		session.getTransaction().commit();
 		HibernateUtils.getSession().close();

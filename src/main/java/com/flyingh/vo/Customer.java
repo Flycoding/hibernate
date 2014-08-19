@@ -1,14 +1,11 @@
 package com.flyingh.vo;
 
-import java.util.Arrays;
+import java.util.Map;
 
 public class Customer {
 	private int id;
 	private String name;
-	private String[] addresses;
-
-	public Customer() {
-	}
+	private Map<String, String> map;
 
 	public int getId() {
 		return id;
@@ -26,17 +23,12 @@ public class Customer {
 		this.name = name;
 	}
 
-	public String[] getAddresses() {
-		return addresses;
+	public Map<String, String> getMap() {
+		return map;
 	}
 
-	public void setAddresses(String[] addresses) {
-		this.addresses = addresses;
-	}
-
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", addresses=" + Arrays.toString(addresses) + "]";
+	public void setMap(Map<String, String> map) {
+		this.map = map;
 	}
 
 }
