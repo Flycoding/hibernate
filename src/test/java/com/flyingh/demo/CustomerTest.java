@@ -1,7 +1,5 @@
 package com.flyingh.demo;
 
-import java.util.Arrays;
-
 import org.hibernate.Session;
 import org.junit.Test;
 
@@ -15,7 +13,7 @@ public class CustomerTest {
 		session.beginTransaction();
 		Customer customer = new Customer();
 		customer.setName("haha");
-		customer.setAddresses(Arrays.asList("a", "b", "c"));
+		customer.setAddresses(new String[] { "a", "b", "c" });
 		session.save(customer);
 		session.getTransaction().commit();
 		HibernateUtils.getSession().close();

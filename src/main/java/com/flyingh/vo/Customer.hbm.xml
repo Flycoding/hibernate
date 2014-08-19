@@ -8,10 +8,10 @@
 			<generator class="native"></generator>
 		</id>
 		<property name="name" length="20"></property>
-		<list name="addresses" table="address">
+		<array name="addresses" table="address">
 			<key column="customer_id"></key>
 			<list-index column="idx"></list-index>
 			<element column="address" type="java.lang.String"></element>
-		</list>
+		</array>
 	</class>
 </hibernate-mapping>

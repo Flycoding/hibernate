@@ -1,19 +1,13 @@
 package com.flyingh.vo;
 
-import java.util.List;
+import java.util.Arrays;
 
 public class Customer {
 	private int id;
 	private String name;
-	private List<String> addresses;
+	private String[] addresses;
 
 	public Customer() {
-	}
-
-	public Customer(int id, String name, List<String> addresses) {
-		this.id = id;
-		this.name = name;
-		this.addresses = addresses;
 	}
 
 	public int getId() {
@@ -32,17 +26,17 @@ public class Customer {
 		this.name = name;
 	}
 
-	public List<String> getAddresses() {
+	public String[] getAddresses() {
 		return addresses;
 	}
 
-	public void setAddresses(List<String> addresses) {
+	public void setAddresses(String[] addresses) {
 		this.addresses = addresses;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", addresses=" + addresses + "]";
+		return "Customer [id=" + id + ", name=" + name + ", addresses=" + Arrays.toString(addresses) + "]";
 	}
 
 }
