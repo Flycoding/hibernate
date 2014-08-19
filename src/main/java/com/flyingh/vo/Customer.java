@@ -1,20 +1,19 @@
 package com.flyingh.vo;
 
-import java.util.Set;
+import java.util.List;
 
 public class Customer {
 	private int id;
 	private String name;
-	private Set<String> address;
+	private List<String> addresses;
 
 	public Customer() {
 	}
 
-	public Customer(int id, String name, Set<String> address) {
-		super();
+	public Customer(int id, String name, List<String> addresses) {
 		this.id = id;
 		this.name = name;
-		this.address = address;
+		this.addresses = addresses;
 	}
 
 	public int getId() {
@@ -33,17 +32,17 @@ public class Customer {
 		this.name = name;
 	}
 
-	public Set<String> getAddress() {
-		return address;
+	public List<String> getAddresses() {
+		return addresses;
 	}
 
-	public void setAddress(Set<String> address) {
-		this.address = address;
+	public void setAddresses(List<String> addresses) {
+		this.addresses = addresses;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", address=" + address + "]";
+		return "Customer [id=" + id + ", name=" + name + ", addresses=" + addresses + "]";
 	}
 
 }
